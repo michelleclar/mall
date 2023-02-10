@@ -104,4 +104,6 @@ public interface ProductService extends IService<Product> {
      * 修改库存,增加销售量
      */
     void subNumber(List<OrderToProduct> orderToProducts);
+
+    Long adminCount(Integer categoryId);
 }

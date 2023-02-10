@@ -2,6 +2,9 @@ package com.carl.user.service.impl;
 
 import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.carl.parma.PageParam;
 import com.carl.parma.UserCheckParam;
 import com.carl.parma.UserLoginParam;
 import com.carl.pojo.User;
@@ -13,6 +16,8 @@ import com.carl.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @program: mall
@@ -138,4 +143,105 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    /**
+     * Carl
+     * TODO:后台用户展示
+     *
+     * @param pageParam return:
+     */
+    @Override
+    public R listPage(PageParam pageParam) {
+
+        IPage<User> page = new Page<>(pageParam.getCurrentPage(),pageParam.getPageSize());
+
+        page = userMapper.selectPage(page, null);
+
+        List<User> records = page.getRecords();
+        long total = page.getTotal();
+        return R.ok("用户查询成功!",records,total);
+    }
+
+    /**
+     * Carl
+     * TODO:删除用户
+     *
+     * @param userId return:
+     */
+    @Override
+    public R remove(Integer userId) {
+
+        int i = userMapper.deleteById(userId);
+        log.info("UserServiceImpl.remove业务结束，结果:{}",i);
+        return R.ok("用户数据删除成功!");
+    }
+
+    /**
+     * 修改用户密码
+     *
+     * @param user
+     * @return
+     */
+    @Override
+    public R update(User user) {
+
+        //检查密码,如果和数据库一致 不需要加密! 证明密码没有修改!
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id",user.getUserId());
+        queryWrapper.eq("password",user.getPassword());
+        Long total = userMapper.selectCount(queryWrapper);
+
+        if (total == 0){
+            //密码不同,已经修改! 新密码需要加密
+            user.setPassword(MD5Util.encode(user.getPassword()+ UserConstants.USER_SLAT));
+        }
+
+        int rows = userMapper.updateById(user);
+
+        if (rows == 0){
+            return R.fail("用户修改失败!");
+        }
+        return R.ok("用户信息修改成功");
+    }
+
+    @Override
+    public R save(User user) {
+        //1.检查账号是否存在
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name",user.getUserName());
+        //数据库查询
+        Long total = userMapper.selectCount(queryWrapper);
+
+        if (total > 0){
+            log.info("UserServiceImpl.register业务结束，结果:{}","账号存在,添加失败!");
+            return R.fail("账号已经存在,不可添加!");
+        }
+        //2.密码加密处理,注意要加盐
+        /**
+         * MD5 一种不可逆转加密方式, 只能加密不能解密!
+         *     固定的明文加密以后的密文是固定!
+         *     123456  --> 加密 ---> 1111111
+         *     注册是加密以后存在密文!
+         *     登录实加密以后,用密文进行数据库对比!
+         * MD5可以暴力破解:
+         *     穷举法
+         *     简单的字符串都是不安全!
+         *     提示用户密码复杂度!
+         *     加盐处理    用户的密码 1 + 字符串[盐] 9999 = 10000
+         */
+
+        String newPwd = MD5Util.encode(user.getPassword() + UserConstants.USER_SLAT);
+        user.setPassword(newPwd);
+
+        //3.插入数据库数据
+        int rows = userMapper.insert(user);
+        //4.返回封装结果
+        if (rows == 0){
+            log.info("UserServiceImpl.register业务结束，结果:{}","数据插入失败!用户添加失败!");
+            return R.fail("用户添加失败!请稍后再试!");
+        }
+
+        log.info("UserServiceImpl.register业务结束，结果:{}","用户添加成功!");
+
+        return R.ok("注册成功!");
+    }
 }

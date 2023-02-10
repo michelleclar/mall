@@ -1,6 +1,8 @@
 package com.carl.category.service;
 
+import com.carl.parma.PageParam;
 import com.carl.parma.ProductHotParam;
+import com.carl.pojo.Category;
 import com.carl.utils.R;
 
 public interface CategoryService {
@@ -27,4 +29,12 @@ public interface CategoryService {
      * @return r 类别数据集合
      */
     R list();
+
+    R listPage(PageParam pageParam);
+
+    R adminSave(Category category);
+
+    R adminRemove(Integer categoryId);
+
+    R adminUpdate(Category category);
 }

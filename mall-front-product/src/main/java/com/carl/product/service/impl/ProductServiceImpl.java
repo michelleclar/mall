@@ -319,8 +319,20 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper,Product> imple
             product.setProductSales(product.getProductSales() + num);
         }
 
+
         //批量数据更新
         this.updateBatchById(productList);
+        log.info("ProductServiceImpl.subNumber业务结束，结果:{}", productList);
+    }
+
+    @Override
+    public Long adminCount(Integer categoryId) {
+
+        QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("category_id",categoryId);
+        Long count = baseMapper.selectCount(queryWrapper);
+        log.info("ProductServiceImpl.adminCount业务结束，结果:{}", count);
+        return count;
     }
 }
 

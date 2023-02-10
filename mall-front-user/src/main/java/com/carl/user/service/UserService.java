@@ -1,5 +1,6 @@
 package com.carl.user.service;
 
+import com.carl.parma.PageParam;
 import com.carl.parma.UserCheckParam;
 import com.carl.parma.UserLoginParam;
 import com.carl.pojo.User;
@@ -46,4 +47,23 @@ public interface UserService{
      */
     R login(UserLoginParam userLoginParam);
 
+    /**
+     * Carl
+     * TODO:后台用户展示
+     * @param pageParam
+     * return:
+     */
+    R listPage(PageParam pageParam);
+
+    /**
+     * Carl
+     * TODO:删除用户
+     * @param userId
+     * return:
+     */
+    R remove(Integer userId);
+
+    R update(User user);
+
+    R save(User user);
 }
