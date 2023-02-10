@@ -16,6 +16,7 @@
       <module>mall-front-collect</module>
       <module>mall-front-cart</module>
       <module>mall-front-order</module>
+      <module>mall-admin</module>
   </modules>
   <!--不需要打包-->
   <packaging>pom</packaging>

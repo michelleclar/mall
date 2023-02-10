@@ -47,4 +47,9 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/order/**
+        # 后台管理服务
+        - id: admin-service
+          uri: lb://admin-service
+          predicates:
+            - Path=/admin/**
 

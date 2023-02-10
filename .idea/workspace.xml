@@ -4,29 +4,143 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="前台模块的完善">
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/parma/AddressParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/parma/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/parma/OrderParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/to/OrderToProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/vo/OrderVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/config/CartConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/listener/CartListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/listener/ProductListener.java" afterDir="false" />
+    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="前台模块的完善-订单">
+      <change afterPath="$PROJECT_DIR$/mall-admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/AdminApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/config/AdminConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/HtmlJumpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/api/clear.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/api/init.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/api/menus.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/api/table.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/api/tableSelect.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/api/upload.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/css/comon0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/css/layuimini.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/css/public.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/css/themes/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/captcha.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/donate_qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/head.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/head_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/icon-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/jt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/lbx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/loginbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/images/weather.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/area_echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/jquery.countup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/echarts/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/echarts/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/iconPicker/iconPickerFa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/layarea/layarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/layuimini/miniAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/layuimini/miniMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/layuimini/miniTab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/layuimini/miniTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/layuimini/miniTongji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/step-lay/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/step-lay/step.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/tableSelect/tableSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/treetable-lay/treetable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/treetable-lay/treetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/wangEditor/fonts/w-e-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/jq-module/jquery.particleground.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/jq-module/paigusu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/jq-module/zyupload/zyupload-1.0.0.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/jq-module/zyupload/zyupload-1.0.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/jquery-3.4.1/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/static/lib/layui-v2.6.3/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/category/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/category/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/category/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/order/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/product/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/product/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/product/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/user/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/user/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/user/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/pojo/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/pojo/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/config/ProductConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/config/ProductConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-user/src/main/java/com/carl/user/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-user/src/main/java/com/carl/user/controller/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +183,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/idea-project/workspaces/mall/mall-static-oss/src/main/resources",
+    "last_opened_file_path": "F:/idea-project/workspaces/mall/mall-admin/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,9 +201,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\idea-project\workspaces\mall\mall-admin\src\main\resources" />
       <recent name="F:\idea-project\workspaces\mall\mall-static-oss\src\main\resources" />
       <recent name="F:\idea-project\workspaces\mall\mall-front-user\src\main\java\com\carl\user" />
       <recent name="F:\idea-project\workspaces\mall\mall-commons\src\main\java\com\carl\utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\idea-project\workspaces\mall\mall-admin\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.carl.cart.config" />
@@ -104,7 +222,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,12 +234,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mall-front-cart" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carl.cart.CartApplication" />
+    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carl.admin.AdminApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl.cart.*" />
+          <option name="PATTERN" value="com.carl.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +247,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mall-front-category" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carl.category.CategoryApplication" />
+    <configuration name="CartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-front-cart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carl.cart.CartApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl.category.*" />
+          <option name="PATTERN" value="com.carl.cart.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,19 +300,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.OrderApplication" />
       <item itemvalue="Spring Boot.CartApplication" />
-      <item itemvalue="Spring Boot.CategoryApplication" />
       <item itemvalue="Spring Boot.SearchApplication" />
       <item itemvalue="Spring Boot.UserApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AdminApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.CartApplication" />
         <item itemvalue="Spring Boot.SearchApplication" />
-        <item itemvalue="Spring Boot.CategoryApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +327,7 @@
       <workItem from="1675864142418" duration="3580000" />
       <workItem from="1675908518879" duration="7734000" />
       <workItem from="1675916764070" duration="33219000" />
-      <workItem from="1675992899454" duration="25994000" />
+      <workItem from="1675992899454" duration="27492000" />
     </task>
     <task id="LOCAL-00001" summary="前台模块的完善">
       <created>1676016659498</created>
@@ -218,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676016659498</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="前台模块的完善-订单">
+      <created>1676023134788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676023134788</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +362,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="前台模块的完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="前台模块的完善" />
+    <MESSAGE value="前台模块的完善-订单" />
+    <option name="LAST_COMMIT_MESSAGE" value="前台模块的完善-订单" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

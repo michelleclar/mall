@@ -16,6 +16,7 @@
         <module name="mall-search" />
         <module name="mall-front-collect" />
         <module name="mall-front-cart" />
+        <module name="mall-admin" />
         <module name="mall-front-carousel" />
         <module name="mall-front-user" />
         <module name="mall-front-product" />
@@ -26,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mall-admin" options="-parameters" />
       <module name="mall-commons" options="-parameters" />
       <module name="mall-front-carousel" options="-parameters" />
       <module name="mall-front-cart" options="-parameters" />
