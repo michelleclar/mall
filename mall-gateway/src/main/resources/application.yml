@@ -1,0 +1,50 @@
+# 配置网关
+spring:
+  cloud:
+    gateway:
+      routes: # 路由规则
+        # 用户服务
+        - id: user-service
+          uri: lb://user-service # 路径服务名称
+          predicates:
+            - Path=/user/**  # 断言 访问user路径转发用户服务
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/product/**
+        # 静态资源对应的服务
+        - id: static-service
+          uri: lb://static-service #静态资源处理以及oss上传服务!
+          predicates:
+            - Path=/public/**
+        # 轮播图服务
+        - id: carousel-service
+          uri: lb://carousel-service #静态资源处理以及oss上传服务!
+          predicates:
+            - Path=/carousel/**
+        # 类别服务
+        - id: category-service
+          uri: lb://category-service
+          predicates:
+            - Path=/category/**
+        # 类别服务
+        - id: search-service
+          uri: lb://search-service
+          predicates:
+            - Path=/search/**
+        # 收藏服务
+        - id: collect-service
+          uri: lb://collect-service
+          predicates:
+            - Path=/collect/**
+        # 购物车服务
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/cart/**
+        # 订单服务
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
+

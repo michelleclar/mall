@@ -1,0 +1,12 @@
+# Project exclude paths
+/mall-commons/target/
+/mall-front-carousel/target/
+/mall-front-cart/target/
+/mall-front-category/target/
+/mall-front-collect/target/
+/mall-front-order/target/
+/mall-front-product/target/
+/mall-front-user/target/
+/mall-gateway/target/
+/mall-search/target/
+/mall-static-oss/target/
