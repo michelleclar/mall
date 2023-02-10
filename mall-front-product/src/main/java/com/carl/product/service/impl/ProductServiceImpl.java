@@ -3,6 +3,7 @@ package com.carl.product.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.carl.clients.CategoryClient;
 import com.carl.clients.SearchClient;
 import com.carl.parma.ProductHotParam;
@@ -13,6 +14,7 @@ import com.carl.pojo.Product;
 import com.carl.product.mapper.PictureMapper;
 import com.carl.product.mapper.ProductMapper;
 import com.carl.product.service.ProductService;
+import com.carl.to.OrderToProduct;
 import com.carl.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @program: mall
@@ -29,7 +34,7 @@ import java.util.List;
  **/
 @Service
 @Slf4j
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl extends ServiceImpl<ProductMapper,Product> implements ProductService {
 
 
     //引入feign客户端需要,在启动类添加配置注解
@@ -98,7 +103,7 @@ public class ProductServiceImpl implements ProductService {
      * @return r
      */
     @Override
-    @Cacheable(value = "list.product",key = "#productHotParam.categoryName")
+    @Cacheable(value = "list.product", key = "#productHotParam.categoryName")
     public R hots(ProductHotParam productHotParam) {
 
         R r = categoryClient.hots(productHotParam);
@@ -133,7 +138,7 @@ public class ProductServiceImpl implements ProductService {
      *
      * @return
      */
-    @Cacheable(value = "list.category",key = "#root.methodName",cacheManager = "cacheManagerDay")
+    @Cacheable(value = "list.category", key = "#root.methodName", cacheManager = "cacheManagerDay")
     @Override
     public R clist() {
         R r = categoryClient.list();
@@ -179,12 +184,12 @@ public class ProductServiceImpl implements ProductService {
      * @param productIds
      * @return
      */
-    @Cacheable(value = "list.product",key = "#productIds")
+    @Cacheable(value = "list.product", key = "#productIds")
     @Override
     public R ids(List<Integer> productIds) {
 
         QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
-        queryWrapper.in("product_id",productIds);
+        queryWrapper.in("product_id", productIds);
 
         List<Product> productList = productMapper.selectList(queryWrapper);
 
@@ -212,7 +217,7 @@ public class ProductServiceImpl implements ProductService {
      * @return
      */
     @Override
-    @Cacheable(value = "product",key = "#productID")
+    @Cacheable(value = "product", key = "#productID")
     public R detail(Integer productID) {
 
         Product product = productMapper.selectById(productID);
@@ -231,7 +236,7 @@ public class ProductServiceImpl implements ProductService {
      * @return
      */
     @Override
-    @Cacheable(value = "picture",key = "#productID")
+    @Cacheable(value = "picture", key = "#productID")
     public R picture(Integer productID) {
 
         //参数封装
@@ -279,12 +284,43 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> cartList(List<Integer> productIds) {
         QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
-        queryWrapper.in("product_id",productIds);
+        queryWrapper.in("product_id", productIds);
 
         List<Product> productList = productMapper.selectList(queryWrapper);
 
         log.info("ProductServiceImpl.cartList业务结束，结果:{}", productList);
         return productList;
+    }
+
+    /**
+     * 修改库存,增加销售量
+     *
+     * @param orderToProducts
+     */
+    @Override
+    public void subNumber(List<OrderToProduct> orderToProducts) {
+        //将productNumberParams转成map
+        //使用id作为key, item做值, 比较相邻的两次key,如果相同,去掉重读!
+        Map<Integer, OrderToProduct> productNumberParamMap = orderToProducts.stream()
+                .collect(Collectors.toMap(OrderToProduct::getProductId, v -> v));
+
+        //封装商品集合
+        Set<Integer> productIds = productNumberParamMap.keySet();
+
+        //查询
+        List<Product> productList = productMapper.selectBatchIds(productIds);
+        //修改
+
+        for (Product product : productList) {
+            Integer num = productNumberParamMap.get(product.getProductId()).getProductNum();
+            //设置新库存
+            product.setProductNum(product.getProductNum() - num);
+            //设置销售量
+            product.setProductSales(product.getProductSales() + num);
+        }
+
+        //批量数据更新
+        this.updateBatchById(productList);
     }
 }
 

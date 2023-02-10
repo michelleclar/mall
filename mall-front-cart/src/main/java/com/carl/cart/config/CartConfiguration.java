@@ -1,6 +1,5 @@
-package com.carl.product.config;
+package com.carl.cart.config;
 
-import com.carl.configuration.CacheConfiguration;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +11,8 @@ import org.springframework.context.annotation.Configuration;
  * @author: Mr.Carl
  **/
 @Configuration
-public class ProductConfiguration extends CacheConfiguration {
+public class CartConfiguration {
+
 
     /**
      * mq序列化方式，选择json！
@@ -24,3 +24,4 @@ public class ProductConfiguration extends CacheConfiguration {
         return new Jackson2JsonMessageConverter();
     }
 }
+

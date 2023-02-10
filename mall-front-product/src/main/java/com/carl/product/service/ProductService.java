@@ -1,17 +1,19 @@
 package com.carl.product.service;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.carl.parma.ProductHotParam;
 import com.carl.parma.ProductIdsParam;
 import com.carl.parma.ProductSearchParam;
 import com.carl.pojo.Product;
+import com.carl.to.OrderToProduct;
 import com.carl.utils.R;
 import lombok.Data;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-public interface ProductService {
+public interface ProductService extends IService<Product> {
 
     /**
      * 单类别名称 查询热门商品 至多7条数据
@@ -97,4 +99,9 @@ public interface ProductService {
      * @return
      */
     List<Product> cartList(List<Integer> productIds);
+
+    /**
+     * 修改库存,增加销售量
+     */
+    void subNumber(List<OrderToProduct> orderToProducts);
 }

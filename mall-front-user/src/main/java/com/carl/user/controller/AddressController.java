@@ -1,6 +1,7 @@
 package com.carl.user.controller;
 
 import com.carl.parma.AddressListParam;
+import com.carl.parma.AddressParam;
 import com.carl.parma.AddressRemoveParam;
 import com.carl.pojo.Address;
 import com.carl.user.service.AddressService;
@@ -45,15 +46,18 @@ public class AddressController {
     /**
      * Carl
      * TODO:保存用户地址
-     * @param address
+     * @param addressParam
      * return:
      */
     @PostMapping("save")
-    public R save(@RequestBody @Validated Address address,BindingResult result){
+    public R save(@RequestBody @Validated AddressParam addressParam, BindingResult result){
         if (result.hasErrors()){
 
             return R.fail("参数异常,保存失败!");
         }
+        Address address = addressParam.getAdd();
+        address.setUserId(addressParam.getUserId());
+
         return addressService.save(address);
     }
 

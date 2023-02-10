@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   profiles:
-    active: cache  #激活store-common模块的缓存配置
+    active: cache,mq  #激活store-common模块的缓存配置
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml
   configuration:
