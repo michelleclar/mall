@@ -1,4 +1,4 @@
-package com.carl.user.constants;
+package com.carl.constants;
 
 /**
  * projectName: mall

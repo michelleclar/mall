@@ -6,7 +6,7 @@ import com.carl.utils.R;
 import lombok.Data;
 
 /**
- * projectName: b2c_cloud_store
+ * projectName: mall
  *
  * @author: carl
  * time: 2022/12/17 11:15 周一

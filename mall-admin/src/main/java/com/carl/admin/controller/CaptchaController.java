@@ -1,7 +1,8 @@
-package com.carl.admin.config;
+package com.carl.admin.controller;
 
 import com.wf.captcha.utils.CaptchaUtil;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -14,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
  * @author: Mr.Carl
  **/
 @Controller
-@RequestMapping()
+@RequestMapping
 public class CaptchaController {
 
-    @RequestMapping("/captcha")
+    @GetMapping("/captcha")
     @ResponseBody
     public void captcha(HttpServletRequest request, HttpServletResponse response) throws Exception {
         //默认四个字符长度的验证码

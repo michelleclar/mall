@@ -8,7 +8,7 @@ import com.carl.utils.R;
 import java.util.List;
 
 /**
- * projectName: b2c_cloud_store
+ * projectName: mall
  *
  * @author: carl
  * time: 2022/12/16 21:30 周日
