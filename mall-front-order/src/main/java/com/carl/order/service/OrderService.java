@@ -14,4 +14,6 @@ public interface OrderService extends IService<Order> {
     R save(OrderParam orderParam);
 
     R list(Integer userId);
+
+    R check(Integer productId);
 }

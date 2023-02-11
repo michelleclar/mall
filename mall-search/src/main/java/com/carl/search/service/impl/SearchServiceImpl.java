@@ -1,6 +1,7 @@
 package com.carl.search.service.impl;
 
 import com.alibaba.cloud.commons.lang.StringUtils;
+import com.carl.doc.ProductDoc;
 import com.carl.parma.ProductSearchParam;
 import com.carl.pojo.Product;
 import com.carl.search.service.SearchService;
@@ -9,10 +10,13 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.media.jfxmedia.logging.Logger;
 import lombok.extern.slf4j.Slf4j;
+import org.elasticsearch.action.delete.DeleteRequest;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
@@ -92,5 +96,29 @@ public class SearchServiceImpl  implements SearchService {
 
         log.info("SearchServiceImpl.search业务结束,结果:{}",ok);
         return ok;
+    }
+
+    @Override
+    public R save(Product product) throws IOException {
+        IndexRequest indexRequest = new IndexRequest("product").id(product.getProductId().toString());
+        ProductDoc productDoc = new ProductDoc(product);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(productDoc);
+
+        indexRequest.source(json, XContentType.JSON);
+        client.index(indexRequest, RequestOptions.DEFAULT);
+
+        return R.ok("數據同步成功!");
+    }
+
+    @Override
+    public R remove(Integer productId) throws IOException {
+        DeleteRequest request = new DeleteRequest("product")
+                .id(productId.toString());
+
+        client.delete(request, RequestOptions.DEFAULT);
+
+        return R.ok("es庫的數據刪除成功!");
     }
 }

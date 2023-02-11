@@ -26,4 +26,6 @@ public interface CollectService {
      * @return
      */
     R remove(Collect collect);
+
+    R removeProduct(Integer productId);
 }

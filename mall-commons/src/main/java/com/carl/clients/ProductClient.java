@@ -3,6 +3,7 @@ package com.carl.clients;
 import com.carl.parma.ProductCollectParam;
 import com.carl.parma.ProductIdParam;
 import com.carl.parma.ProductIdsParam;
+import com.carl.parma.ProductSaveParam;
 import com.carl.pojo.Product;
 import com.carl.utils.R;
 import javafx.geometry.Pos;
@@ -46,4 +47,13 @@ public interface ProductClient {
     List<Product> cartList(@RequestBody ProductCollectParam productCollectParam);
     @PostMapping("/product/admin/count")
     Long adminCount(@RequestBody Integer categoryId);
+
+    @PostMapping("/product/admin/save")
+    R adminSave(@RequestBody ProductSaveParam saveParam);
+
+    @PostMapping("/product/admin/update")
+    R adminUpdate(@RequestBody Product product);
+
+    @PostMapping("/product/admin/remove")
+    R adminRemove(@RequestBody Integer productId);
 }

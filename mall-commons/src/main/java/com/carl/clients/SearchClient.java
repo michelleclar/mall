@@ -1,6 +1,7 @@
 package com.carl.clients;
 
 import com.carl.parma.ProductSearchParam;
+import com.carl.pojo.Product;
 import com.carl.utils.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,12 @@ public interface SearchClient {
      */
     @PostMapping("/search/product")
     R search(@RequestBody ProductSearchParam productSearchParam);
+
+    @PostMapping("/search/save")
+    R saveOrUpdate(@RequestBody Product product);
+
+    @PostMapping("/search/remove")
+    R saveOrRemove(@RequestBody Integer productId);
 
 }
 

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.carl.parma.ProductHotParam;
 import com.carl.parma.ProductIdsParam;
+import com.carl.parma.ProductSaveParam;
 import com.carl.parma.ProductSearchParam;
 import com.carl.pojo.Product;
 import com.carl.to.OrderToProduct;
@@ -106,4 +107,10 @@ public interface ProductService extends IService<Product> {
     void subNumber(List<OrderToProduct> orderToProducts);
 
     Long adminCount(Integer categoryId);
+
+    R adminSave(ProductSaveParam productSaveParam);
+
+    R adminUpdate(Product product);
+
+    R adminRemove(Integer productId);
 }

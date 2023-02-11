@@ -13,9 +13,14 @@ spring:
     check-template: true  #检查模板是否存在
     check-template-location: true # 检查模板位置正确性 默认查找 resources templates文件夹内
     servlet:
-      content-type: text/html # 直接嵌入到html文件中
+      content-type: text/html # 直接嵌入到html文件
     enabled: true
     encoding: UTF-8
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
 
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml

@@ -18,6 +18,8 @@ mybatis-plus:
   type-aliases-package: com.carl.pojo #设置别名
 
 ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
   eager-load:
     enabled: true #开启饥饿加载提升第一次访问速度
     clients:

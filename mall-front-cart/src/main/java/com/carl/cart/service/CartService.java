@@ -44,4 +44,6 @@ public interface CartService {
      * 清空对应id的购物车项
      */
     void clearIds(List<Integer> cartIds);
+
+    R check(Integer productId);
 }

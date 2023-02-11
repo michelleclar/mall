@@ -23,7 +23,7 @@ import java.io.IOException;
  * @description: 监听消息通知
  * @author: Mr.Carl
  **/
-@Component
+
 public class RabbitMQListener {
 
     @Autowired

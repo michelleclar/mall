@@ -3,8 +3,7 @@ package com.carl.product;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import com.carl.clients.CategoryClient;
-import com.carl.clients.SearchClient;
+import com.carl.clients.*;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +19,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @MapperScan(basePackages = "com.carl.product.mapper")
 //开启feign客户端,引入对应的客户端
-@EnableFeignClients(clients = {CategoryClient.class, SearchClient.class})
+@EnableFeignClients(clients = {CategoryClient.class, SearchClient.class, CartClient.class, OrderClient.class, CollectClient.class})
 @EnableCaching
 public class ProductApplication {
 

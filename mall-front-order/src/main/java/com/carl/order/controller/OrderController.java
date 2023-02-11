@@ -50,4 +50,10 @@ public class OrderController {
 
         return orderService.list(cartListParam.getUserId());
     }
+
+    @PostMapping("remove/check")
+    public R removeCheck(@RequestBody Integer productId){
+
+        return orderService.check(productId);
+    }
 }

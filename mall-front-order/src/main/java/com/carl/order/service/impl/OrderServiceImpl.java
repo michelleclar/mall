@@ -172,4 +172,17 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         return ok;
     }
 
+    @Override
+    public R check(Integer productId) {
+
+        QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id",productId);
+
+        Long count = baseMapper.selectCount(queryWrapper);
+        if (count>0){
+            return R.fail("订单有引用");
+        }
+        return R.ok("无购物车引用,可以删除");
+    }
+
 }
