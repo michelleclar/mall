@@ -5,13 +5,11 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.carl.clients.ProductClient;
 import com.carl.order.mapper.OrderMapper;
 import com.carl.order.service.OrderService;
-import com.carl.parma.Order;
-import com.carl.parma.OrderParam;
-import com.carl.parma.ProductCollectParam;
-import com.carl.parma.ProductIdsParam;
+import com.carl.parma.*;
 import com.carl.pojo.Product;
 import com.carl.to.OrderToProduct;
 import com.carl.utils.R;
+import com.carl.vo.AdminOrderVo;
 import com.carl.vo.CartVo;
 import com.carl.vo.OrderVo;
 import lombok.extern.slf4j.Slf4j;
@@ -41,6 +39,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
      */
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private OrderMapper orderMapper;
 
     /**
      * 订单保存业务
@@ -183,6 +184,22 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
             return R.fail("订单有引用");
         }
         return R.ok("无购物车引用,可以删除");
+    }
+
+    /**
+     * Carl
+     * TODO:后台管理查询订单数据
+     */
+    @Override
+    public R adminList(PageParam pageParam) {
+
+        int offset = (pageParam.getCurrentPage()-1)*pageParam.getPageSize();
+        int pageSize = pageParam.getPageSize();
+
+        List<AdminOrderVo> adminOrderVos = orderMapper.selectAdminOrder(offset,pageSize);
+
+
+        return R.ok("订单数据查询成功!",adminOrderVos);
     }
 
 }

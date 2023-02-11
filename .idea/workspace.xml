@@ -4,41 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="后台模块框架搭建-用户-类别-商品">
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/utils/AliyunOSSUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/CartClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/CollectClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/OrderClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/parma/ProductSaveParam.java" afterDir="false" />
+    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="后台模块框架搭建-用户-类别-商品(es异步改同步)">
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/vo/AdminOrderVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-front-order/src/main/resources/mappers/OrderMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/HtmlJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/HtmlJumpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/category/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/category/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/product/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/templates/product/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/SearchClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/SearchClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/java/com/carl/cart/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-collect/src/main/java/com/carl/collect/controller/CollectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/src/main/java/com/carl/collect/controller/CollectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-collect/src/main/java/com/carl/collect/service/CollectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/src/main/java/com/carl/collect/service/CollectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-collect/src/main/java/com/carl/collect/service/impl/CollectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/src/main/java/com/carl/collect/service/impl/CollectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/OrderClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/mapper/OrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/ProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/controller/ProductAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/controller/ProductAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/java/com/carl/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/listener/RabbitMQListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/listener/RabbitMQListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/service/impl/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/java/com/carl/search/service/impl/SearchServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +28,7 @@
       <list>
         <option value="application" />
         <option value="bootstrap" />
+        <option value="mybatis-mapper" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -92,6 +71,11 @@
     "settings.editor.selected.configurable": "preferences.sourceCode.Haml",
     "spring.configuration.checksum": "fa079d227f51eb0e2d6abedfae63a2d7",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -172,12 +156,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mall-front-category" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carl.category.CategoryApplication" />
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-front-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carl.order.OrderApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl.category.*" />
+          <option name="PATTERN" value="com.carl.order.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -200,7 +184,7 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.CarouselApplication" />
-      <item itemvalue="Spring Boot.CategoryApplication" />
+      <item itemvalue="Spring Boot.OrderApplication" />
       <item itemvalue="Spring Boot.CartApplication" />
       <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.SearchApplication" />
@@ -210,8 +194,8 @@
         <item itemvalue="Spring Boot.AdminApplication" />
         <item itemvalue="Spring Boot.SearchApplication" />
         <item itemvalue="Spring Boot.CartApplication" />
+        <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.CarouselApplication" />
-        <item itemvalue="Spring Boot.CategoryApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +211,7 @@
       <workItem from="1675908518879" duration="7734000" />
       <workItem from="1675916764070" duration="33219000" />
       <workItem from="1675992899454" duration="47383000" />
-      <workItem from="1676080732127" duration="7096000" />
+      <workItem from="1676080732127" duration="11457000" />
     </task>
     <task id="LOCAL-00001" summary="前台模块的完善">
       <created>1676016659498</created>
@@ -264,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676037857096</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="后台模块框架搭建-用户-类别-商品(es异步改同步)">
+      <created>1676087984715</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676087984715</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +278,8 @@
     <MESSAGE value="后台模块框架搭建" />
     <MESSAGE value="后台模块框架搭建-登录接口完善" />
     <MESSAGE value="后台模块框架搭建-用户-类别-商品" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台模块框架搭建-用户-类别-商品" />
+    <MESSAGE value="后台模块框架搭建-用户-类别-商品(es异步改同步)" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台模块框架搭建-用户-类别-商品(es异步改同步)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -316,6 +308,11 @@
           <url>file://$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/impl/ProductServiceImpl.java</url>
           <line>37</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/impl/OrderServiceImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

@@ -3,6 +3,7 @@ package com.carl.order.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.carl.parma.Order;
 import com.carl.parma.OrderParam;
+import com.carl.parma.PageParam;
 import com.carl.utils.R;
 
 /**
@@ -16,4 +17,6 @@ public interface OrderService extends IService<Order> {
     R list(Integer userId);
 
     R check(Integer productId);
+
+    R adminList(PageParam pageParam);
 }

@@ -3,6 +3,7 @@ package com.carl.order.controller;
 import com.carl.order.service.OrderService;
 import com.carl.parma.CartListParam;
 import com.carl.parma.OrderParam;
+import com.carl.parma.PageParam;
 import com.carl.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -55,5 +56,11 @@ public class OrderController {
     public R removeCheck(@RequestBody Integer productId){
 
         return orderService.check(productId);
+    }
+
+    @PostMapping("admin/list")
+    public R adminList(@RequestBody PageParam pageParam){
+
+        return orderService.adminList(pageParam);
     }
 }
