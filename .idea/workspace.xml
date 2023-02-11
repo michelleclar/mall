@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="后台模块框架搭建-订单">
+    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="添加readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-carousel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-carousel/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-carousel/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-carousel/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-category/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-category/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-category/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-category/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-collect/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-collect/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-user/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/idea-project/workspaces/mall/mall-admin/src/main/resources",
+    "last_opened_file_path": "C:/Users/86152/Desktop/毕业设计/vue-store-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -216,7 +200,7 @@
       <workItem from="1675908518879" duration="7734000" />
       <workItem from="1675916764070" duration="33219000" />
       <workItem from="1675992899454" duration="47383000" />
-      <workItem from="1676080732127" duration="13968000" />
+      <workItem from="1676080732127" duration="18712000" />
     </task>
     <task id="LOCAL-00001" summary="前台模块的完善">
       <created>1676016659498</created>
@@ -267,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676092372738</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加readme">
+      <created>1676094951220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676094951220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +283,8 @@
     <MESSAGE value="后台模块框架搭建-用户-类别-商品" />
     <MESSAGE value="后台模块框架搭建-用户-类别-商品(es异步改同步)" />
     <MESSAGE value="后台模块框架搭建-订单" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台模块框架搭建-订单" />
+    <MESSAGE value="添加readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
