@@ -1,7 +1,7 @@
 spring:
   # 连接池配置
   datasource:
-    url: jdbc:mysql://localhost:3306/store_admin?useSSL=false
+    url: jdbc:mysql://localhost:3306/mall_admin?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -36,7 +36,7 @@ ribbon:
   eager-load:
     enabled: true #开启饥饿加载提升第一次访问速度
     clients:
-      - store-service #指定开启服务
+      - admin-service #指定开启服务
 feign:
   httpclient:
     enabled: true  # 开启httpClient开关,启动连接池,提升feign连接效率!

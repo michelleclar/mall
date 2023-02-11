@@ -1,13 +1,13 @@
 spring:
   # 连接池配置
   datasource:
-    url: jdbc:mysql://localhost:3306/store_product?useSSL=false
+    url: jdbc:mysql://localhost:3306/mall_product?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   profiles:
-    active: cache,mq  #激活store-common模块的缓存配置
+    active: cache,mq  #激活mall-common模块的缓存配置
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml
   configuration:

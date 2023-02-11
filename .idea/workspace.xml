@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="后台模块框架搭建-用户-类别-商品(es异步改同步)">
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/vo/AdminOrderVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-front-order/src/main/resources/mappers/OrderMapper.xml" afterDir="false" />
+    <list default="true" id="861e5445-92bd-4f4e-87ba-e3d5d46866b8" name="Changes" comment="后台模块框架搭建-订单">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/carl/admin/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-commons/src/main/java/com/carl/clients/OrderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/java/com/carl/order/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-carousel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-carousel/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-carousel/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-carousel/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-cart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-category/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-category/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-category/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-category/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-collect/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-collect/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-collect/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-order/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-front-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-front-user/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15527344",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Haml",
+    "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "fa079d227f51eb0e2d6abedfae63a2d7",
     "vue.rearranger.settings.migration": "true"
   },
@@ -211,7 +216,7 @@
       <workItem from="1675908518879" duration="7734000" />
       <workItem from="1675916764070" duration="33219000" />
       <workItem from="1675992899454" duration="47383000" />
-      <workItem from="1676080732127" duration="11457000" />
+      <workItem from="1676080732127" duration="13968000" />
     </task>
     <task id="LOCAL-00001" summary="前台模块的完善">
       <created>1676016659498</created>
@@ -255,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676087984715</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="后台模块框架搭建-订单">
+      <created>1676092372738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676092372738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +291,8 @@
     <MESSAGE value="后台模块框架搭建-登录接口完善" />
     <MESSAGE value="后台模块框架搭建-用户-类别-商品" />
     <MESSAGE value="后台模块框架搭建-用户-类别-商品(es异步改同步)" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台模块框架搭建-用户-类别-商品(es异步改同步)" />
+    <MESSAGE value="后台模块框架搭建-订单" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台模块框架搭建-订单" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

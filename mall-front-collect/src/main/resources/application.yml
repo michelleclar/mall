@@ -1,7 +1,7 @@
 spring:
   # 连接池配置
   datasource:
-    url: jdbc:mysql://localhost:3306/store_collect?useSSL=false
+    url: jdbc:mysql://localhost:3306/mall_collect?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
